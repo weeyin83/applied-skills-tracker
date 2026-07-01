@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Track your progress through the Microsoft Applied Skills credentials catalog." />
+    <meta name="theme-color" content="#0f172a" />
+    <title>My Microsoft Applied Skills Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AF%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <div>
+                    <h1 class="brand-title">Microsoft Applied Skills Tracker</h1>
+                    <p class="brand-tagline">Track your journey through the Microsoft Applied Skills catalog</p>
+                </div>
+            </div>
+            <a class="github-link" data-repo-link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="View project on GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.75 5.48.75 11.75c0 4.94 3.2 9.13 7.64 10.61.56.1.77-.24.77-.54v-1.9c-3.11.68-3.77-1.5-3.77-1.5-.51-1.29-1.24-1.64-1.24-1.64-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 .17 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.43.11-2.99 0 0 .95-.3 3.1 1.15.9-.25 1.86-.38 2.82-.38.96 0 1.92.13 2.82.38 2.15-1.45 3.1-1.15 3.1-1.15.61 1.56.23 2.71.11 2.99.72.78 1.16 1.78 1.16 3 0 4.3-2.61 5.24-5.1 5.52.4.34.76 1.02.76 2.06v3.05c0 .3.2.65.78.54 4.43-1.48 7.63-5.67 7.63-10.61C23.25 5.48 18.27.5 12 .5z"/></svg>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="profile container">
+            <div class="profile-card">
+                <div class="profile-card__avatar-wrap">
+                    <img class="profile-card__avatar" data-profile-avatar alt="" src="./assets/avatar.svg" />
+                </div>
+                <div class="profile-card__body">
+                    <p class="profile-card__eyebrow">Applied Skills journey of</p>
+                    <h2 class="profile-card__name" data-profile-name>Your Name</h2>
+                    <p class="profile-card__headline" data-profile-headline></p>
+                    <p class="profile-card__location" data-profile-location hidden></p>
+                    <ul class="profile-card__links" data-profile-links aria-label="Social links"></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero container">
+            <h2 class="hero-title">What are <span class="gradient-text">Applied Skills</span>?</h2>
+            <p class="hero-lede">
+                Microsoft Applied Skills are scenario-based, hands-on credentials that verify you can actually
+                <em>do</em> a job task &mdash; not just answer questions about it. This tracker shows every
+                available Applied Skill in one place, so I can celebrate each one I complete.
+            </p>
+        </section>
+
+        <section class="progress-panel container" aria-labelledby="progress-heading">
+            <h2 id="progress-heading" class="section-heading">Your progress</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-label">Earnable skills</span>
+                    <span class="stat-value" data-stat="total">&mdash;</span>
+                </div>
+                <div class="stat-card stat-card--achieved">
+                    <span class="stat-label">Achieved</span>
+                    <span class="stat-value" data-stat="achieved">&mdash;</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Remaining</span>
+                    <span class="stat-value" data-stat="remaining">&mdash;</span>
+                </div>
+                <div class="stat-card stat-card--percent">
+                    <span class="stat-label">Complete</span>
+                    <span class="stat-value" data-stat="percent">&mdash;</span>
+                </div>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Overall completion">
+                <div class="progress-bar__fill" data-progress-fill></div>
+            </div>
+            <p class="progress-caption" data-progress-caption></p>
+        </section>
+
+        <section class="controls container" aria-label="Filter and sort skills">
+            <div class="filter-group" role="tablist" aria-label="Filter by status">
+                <button type="button" class="chip is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button type="button" class="chip" data-filter="achieved" role="tab" aria-selected="false">Achieved</button>
+                <button type="button" class="chip" data-filter="not-started" role="tab" aria-selected="false">Not yet achieved</button>
+                <button type="button" class="chip" data-filter="retired" role="tab" aria-selected="false">Retired</button>
+            </div>
+            <div class="control-row">
+                <label class="search-field">
+                    <span class="visually-hidden">Search skills</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M10 2a8 8 0 105.29 14.03l4.84 4.84 1.41-1.41-4.84-4.84A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+                    <input type="search" id="search" placeholder="Search by skill name&hellip;" autocomplete="off" />
+                </label>
+                <label class="sort-field">
+                    <span class="visually-hidden">Sort skills</span>
+                    <select id="sort" aria-label="Sort skills">
+                        <option value="default">Sort: Default order</option>
+                        <option value="name-asc">Name (A &rarr; Z)</option>
+                        <option value="name-desc">Name (Z &rarr; A)</option>
+                        <option value="date-desc">Recently achieved</option>
+                        <option value="date-asc">Earliest achieved</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <section class="skills container" aria-live="polite">
+            <div id="skills-grid" class="skills-grid"></div>
+            <div id="empty-state" class="empty-state" hidden>
+                <p class="empty-state__title">Nothing to show here yet.</p>
+                <p class="empty-state__body">Try clearing your search or picking a different filter.</p>
+            </div> Fork this project on
+                <a data-repo-link href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            <p id="loading-state" class="loading-state">Loading skills&hellip;</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                Built with plain HTML, CSS, and JavaScript &middot; deployable to
+                <a href="https://learn.microsoft.com/azure/static-web-apps/overview" target="_blank" rel="noopener noreferrer">Azure Static Web Apps</a>
+                on the Free plan.
+            </p>
+            <p class="footer-meta">
+                Skill list sourced from the
+                <a href="https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills" target="_blank" rel="noopener noreferrer">Microsoft Learn credentials catalog</a>.
+                Not affiliated with Microsoft.
+            </p>
+        </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+</body>
+</html>

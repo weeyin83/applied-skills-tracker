@@ -1,0 +1,322 @@
+{
+  "lastUpdated": "2026-07-01",
+  "source": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
+  "notes": "Includes both active and retired credentials. Retired skills stay in the list so previously earned ones still count.",
+  "skills": [
+    {
+      "id": "configure-and-migrate-to-azure-database-for-postgresql",
+      "name": "Configure and migrate to Azure Database for PostgreSQL",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/configure-and-migrate-to-azure-database-for-postgresql/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "get-started-with-classes-properties-and-methods-in-c-sharp",
+      "name": "Get started with classes, properties, and methods in C#",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-with-classes-properties-and-methods-in-c-sharp/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "manage-github-secret-scanning-by-using-github-copilot",
+      "name": "Manage GitHub secret scanning by using GitHub Copilot",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/manage-github-secret-scanning-by-using-github-copilot/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "enhance-agents-with-autonomous-capabilities",
+      "name": "Enhance agents with autonomous capabilities",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/enhance-agents-with-autonomous-capabilities/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "protect-information-in-microsoft-365-copilot-by-using-microsoft-purview",
+      "name": "Protect information in Microsoft 365 Copilot by using Microsoft Purview",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/protect-information-in-microsoft-365-copilot-by-using-microsoft-purview/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "develop-data-driven-applications-by-using-microsoft-azure-sql-database",
+      "name": "Develop data-driven applications by using Microsoft Azure SQL Database",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/develop-data-driven-applications-by-using-microsoft-azure-sql-database/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "build-ai-powered-solutions-by-using-microsoft-azure-database-for-postgresql",
+      "name": "Build AI-powered solutions by using Microsoft Azure Database for PostgreSQL",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/build-ai-powered-solutions-by-using-microsoft-azure-database-for-postgresql/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "implement-retention-ediscovery-and-communication-compliance-in-microsoft-purview",
+      "name": "Implement retention, eDiscovery, and Communication Compliance in Microsoft Purview",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-retention-ediscovery-and-communication-compliance-in-microsoft-purview/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "deploy-cloud-native-apps-using-azure-container-apps",
+      "name": "Deploy cloud-native apps using Azure Container Apps",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-cloud-native-apps-using-azure-container-apps/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "deploy-and-configure-azure-monitor",
+      "name": "Deploy and configure Azure Monitor",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-and-configure-azure-monitor/",
+      "status": "achieved",
+      "achievedDate": "2024-10-15",
+      "notes": ""
+    },
+    {
+      "id": "automate-azure-load-testing-by-using-github-actions",
+      "name": "Automate Azure Load Testing by using GitHub Actions",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/automate-azure-load-testing-by-using-github-actions/",
+      "status": "achieved",
+      "achievedDate": "2026-05-28",
+      "notes": ""
+    },
+    {
+      "id": "resolve-github-issues-by-using-github-copilot",
+      "name": "Resolve GitHub issues by using GitHub Copilot",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/resolve-github-issues-by-using-github-copilot/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "develop-a-generative-ai-chat-app-using-the-microsoft-foundry-sdk",
+      "name": "Develop a Generative AI Chat App Using the Microsoft Foundry SDK",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/build-a-generative-ai-chat-app/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "migrate-sql-server-workloads-to-azure-sql-database",
+      "name": "Migrate SQL Server workloads to Azure SQL Database",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/migrate-sql-workloads-azure-sql-database/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "create-agentic-workflows-by-using-microsoft-foundry",
+      "name": "Create agentic workflows by using Microsoft Foundry",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-agentic-workflows-by-using-microsoft-foundry/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "defend-against-cyberthreats-with-microsoft-defender-xdr",
+      "name": "Defend against cyberthreats with Microsoft Defender XDR",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/defend-against-cyberthreats-with-microsoft-defender-xdr/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "implement-a-real-time-intelligence-solution-with-microsoft-fabric",
+      "name": "Implement a Real-Time Intelligence solution with Microsoft Fabric",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-a-real-time-intelligence-solution-with-microsoft-fabric/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "generate-reports-with-ai-research-agents",
+      "name": "Generate reports with AI research agents",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/generate-reports-with-ai-research-agents/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "get-started-with-cloud-security-and-monitoring-tasks",
+      "name": "Get started with cloud security and monitoring tasks",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-with-cloud-security-and-monitoring-tasks/",
+      "status": "achieved",
+      "achievedDate": "2026-07-01",
+      "notes": ""
+    },
+    {
+      "id": "secure-storage-for-azure-files-and-azure-blob-storage",
+      "name": "Secure storage for Azure Files and Azure Blob Storage",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/secure-storage-azure-files-azure-blob-storage/",
+      "status": "achieved",
+      "achievedDate": "2024-07-22",
+      "notes": ""
+    },
+    {
+      "id": "get-started-with-azure-management-tasks",
+      "name": "Get started with Azure management tasks",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-with-azure-management-tasks/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "streamline-business-workflows-with-ai-chat",
+      "name": "Streamline business workflows with AI chat",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/streamline-business-workflows-with-ai-chat/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "secure-azure-services-and-workloads-with-microsoft-defender-for-cloud-regulatory-compliance-controls",
+      "name": "Secure Azure services and workloads with Microsoft Defender for Cloud regulatory compliance controls",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/secure-azure-services-and-workloads-with-microsoft-defender-for-cloud-regulatory-compliance-controls/",
+      "status": "achieved",
+      "achievedDate": "2026-05-01",
+      "notes": ""
+    },
+    {
+      "id": "secure-ai-solutions-in-the-cloud",
+      "name": "Secure AI solutions in the cloud",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/secure-ai-solutions-in-the-cloud/",
+      "status": "achieved",
+      "achievedDate": "2026-05-01",
+      "notes": ""
+    },
+    {
+      "id": "integrate-model-context-protocol-tools-with-agents-in-microsoft-foundry",
+      "name": "Integrate model context protocol tools with agents in Microsoft Foundry",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/integrate-model-context-protocol-tools-with-agents-in-microsoft-foundry/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "implement-information-protection-and-data-loss-prevention-by-using-microsoft-purview",
+      "name": "Implement information protection and data loss prevention by using Microsoft Purview",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-information-protection-and-data-loss-prevention-by-using-microsoft-purview/",
+      "status": "achieved",
+      "achievedDate": "2024-11-07",
+      "notes": ""
+    },
+    {
+      "id": "create-and-manage-canvas-apps-with-power-apps",
+      "name": "Create and manage canvas apps with Power Apps",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-manage-canvas-apps-power-apps/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "administer-active-directory-domain-services",
+      "name": "Administer Active Directory Domain Services",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/administer-active-directory-domain-services/",
+      "status": "achieved",
+      "achievedDate": "2024-07-04",
+      "notes": ""
+    },
+    {
+      "id": "implement-security-through-a-pipeline-using-azure-devops",
+      "name": "Implement security through a pipeline using Azure DevOps",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-security-through-pipeline-using-devops/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "create-agents-in-microsoft-copilot-studio",
+      "name": "Create agents in Microsoft Copilot Studio",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-agents-in-microsoft-copilot-studio/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": "",
+      "retiresOn": "2026-07-08"
+    },
+    {
+      "id": "get-started-developing-agents-in-microsoft-foundry",
+      "name": "Get started developing agents in Microsoft Foundry",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-developing-agents-in-microsoft-foundry/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "get-started-with-identities-and-access-using-microsoft-entra",
+      "name": "Get started with identities and access using Microsoft Entra",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-with-identities-and-access-using-microsoft-entra/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "configure-secure-access-to-your-workloads-using-azure-networking",
+      "name": "Configure secure access to your workloads using Azure networking",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/configure-secure-workloads-use-azure-virtual-networking/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "create-and-manage-automated-processes-by-using-power-automate",
+      "name": "Create and manage automated processes by using Power Automate",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-and-manage-automated-processes-with-power-automate/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "accelerate-ai-assisted-development-by-using-github-copilot",
+      "name": "Accelerate AI-assisted development by using GitHub Copilot",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/accelerate-app-development-by-using-github-copilot/",
+      "status": "achieved",
+      "achievedDate": "2026-05-28",
+      "notes": ""
+    },
+    {
+      "id": "create-an-ai-agent",
+      "name": "Create an AI agent",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-an-ai-agent/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": "",
+      "retired": true
+    },
+    {
+      "id": "implement-knowledge-mining-with-azure-ai-search",
+      "name": "Implement knowledge mining with Azure AI Search",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-knowledge-mining-with-azure-ai-search/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": "",
+      "retired": true
+    },
+    {
+      "id": "configure-siem-security-operations-using-microsoft-sentinel",
+      "name": "Configure SIEM security operations using Microsoft Sentinel",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/configure-siem-security-operations-using-microsoft-sentinel/",
+      "status": "achieved",
+      "achievedDate": "2024-12-18",
+      "notes": ""
+    },
+    {
+      "id": "deploy-and-manage-azure-arc-enabled-servers",
+      "name": "Deploy and manage Microsoft Azure Arc–enabled servers",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-and-manage-azure-arc-enabled-servers/",
+      "status": "achieved",
+      "achievedDate": "2024-07-17",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "owner": {
+        "name": "Sarah Lean",
+        "headline": "Chasing every Microsoft Applied Skill, one hands-on lab at a time.",
+        "avatarUrl": "./assets/avatar.jpg",
+        "location": "Glasgow, Scotland"
+    },
+    "links": [
+        {
+            "label": "LinkedIn",
+            "url": "https://www.linkedin.com/in/sazlean",
+            "icon": "linkedin"
+        },
+        {
+            "label": "GitHub",
+            "url": "https://github.com/weeyin83",
+            "icon": "github"
+        },
+        {
+            "label": "Website",
+            "url": "https://www.techielass.com",
+            "icon": "website"
+        }
+    ],
+    "repoUrl": "https://github.com/your-handle/applied-skills-tracker"
+}

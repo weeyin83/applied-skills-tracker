@@ -1,0 +1,32 @@
+{
+    "name": "Applied Skills Tracker",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+    "forwardPorts": [8080],
+    "portsAttributes": {
+        "8080": {
+            "label": "Applied Skills Tracker",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "postCreateCommand": "npm install --global serve",
+    "postAttachCommand": {
+        "server": "serve --listen 8080 --no-clipboard --no-request-logging ."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "ecmel.vscode-html-css",
+                "ritwickdey.LiveServer",
+                "streetsidesoftware.code-spell-checker",
+                "GitHub.vscode-pull-request-github"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "files.eol": "\n"
+            }
+        }
+    },
+    "remoteUser": "node"
+}

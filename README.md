@@ -32,9 +32,6 @@ your journey with the community.
 applied-skills-tracker/
 ├── .devcontainer/
 │   └── devcontainer.json               # One-click dev environment
-├── .github/
-│   └── workflows/
-│       └── azure-static-web-apps.yml   # GitHub Actions workflow for Azure SWA
 ├── .vscode/
 │   └── extensions.json                 # Recommended editor extensions
 ├── assets/
@@ -175,28 +172,30 @@ serve --listen 8080 .
 
 ---
 
-## Deploy to Azure Static Web Apps (Free plan)
+## Create your own copy on Azure Static Web Apps (Free plan)
 
-The Free tier of Azure Static Web Apps is perfect for this project — no
-custom domain fees, generous bandwidth, and free HTTPS.
+Want your own live tracker? Fork this repo and deploy it to the Free tier of
+Azure Static Web Apps — no custom domain fees, generous bandwidth, and free
+HTTPS included.
 
-1. **Push this folder to a new GitHub repository.**
+This repo deliberately does **not** ship a GitHub Actions workflow. When you
+connect your fork to Azure Static Web Apps, Azure will generate a workflow
+tailored to your deployment token and commit it to your repository for you.
+
+1. **Fork this repo** into your own GitHub account (or click *Use this template*).
 2. In the [Azure portal](https://portal.azure.com), create a new
    **Static Web App** resource:
    - **Plan type:** Free.
-   - **Source:** GitHub → select your fork.
+   - **Source:** GitHub → select your fork and the `main` branch.
    - **Build presets:** `Custom`.
    - **App location:** `/`
    - **Api location:** *(leave empty)*
    - **Output location:** *(leave empty)*
-3. Azure creates a GitHub Actions workflow in your repository. This project
-   already ships with an equivalent workflow at
-   [`.github/workflows/azure-static-web-apps.yml`](.github/workflows/azure-static-web-apps.yml).
-   If Azure adds a second workflow, keep the one that matches your deployment
-   token and delete the other.
-4. Add the deployment token Azure gave you as a repository secret named
-   `AZURE_STATIC_WEB_APPS_API_TOKEN`
-   (Settings → Secrets and variables → Actions → New repository secret).
+3. Azure commits a new workflow file to `.github/workflows/` in your fork and
+   adds the `AZURE_STATIC_WEB_APPS_API_TOKEN` secret automatically.
+4. Pull that workflow back down locally (`git pull`), then edit
+   [`config.json`](config.json) and [`data/skills.json`](data/skills.json)
+   with your details.
 5. Push to `main` — the workflow builds and deploys automatically.
 
 Your site is live at the `*.azurestaticapps.net` URL shown in the Azure

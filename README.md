@@ -12,7 +12,7 @@ your journey with the community.
 - Responsive, accessible, dark-mode friendly out of the box.
 
 > Inspired by community projects like
-> [`weeyin83/exam-timeline`](https://github.com/weeyin83/exam-timeline) — build
+> [`guygregory/exam-timeline`](https://github.com/guygregory/exam-timeline) — build
 > your own visible learning story.
 
 ---

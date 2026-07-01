@@ -1,4 +1,4 @@
-name: Sync Microsoft Learn transcript
+name: Sync Microsoft Learn data
 
 on:
   schedule:
@@ -11,6 +11,9 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    env:
+      TRANSCRIPT_SHARE_ID: ${{ secrets.TRANSCRIPT_SHARE_ID }}
+      LEARN_LOCALE: ${{ vars.LEARN_LOCALE || 'en-us' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -18,10 +21,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Sync Applied Skills catalog into data/skills.json
+        run: python scripts/sync_catalog.py
+
       - name: Sync transcript into data/skills.json
-        env:
-          TRANSCRIPT_SHARE_ID: ${{ secrets.TRANSCRIPT_SHARE_ID }}
-          LEARN_LOCALE: ${{ vars.LEARN_LOCALE || 'en-us' }}
+        if: ${{ env.TRANSCRIPT_SHARE_ID != '' }}
         run: python scripts/sync_transcript.py
 
       - name: Commit changes if any
@@ -30,7 +34,7 @@ jobs:
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add data/skills.json
-            git commit -m "chore: sync Applied Skills from Learn transcript"
+            git commit -m "chore: sync Applied Skills from Microsoft Learn"
             git push
           else
             echo "No changes to commit."

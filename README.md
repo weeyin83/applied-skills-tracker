@@ -34,7 +34,7 @@ applied-skills-tracker/
 │   └── devcontainer.json               # One-click dev environment
 ├── .github/
 │   └── workflows/
-│       └── sync-transcript.yml         # Daily Learn transcript sync
+│       └── sync-transcript.yml         # Daily Learn catalog + transcript sync
 ├── .vscode/
 │   └── extensions.json                 # Recommended editor extensions
 ├── assets/
@@ -42,6 +42,7 @@ applied-skills-tracker/
 ├── data/
 │   └── skills.json                     # ← THE file you edit to mark progress
 ├── scripts/
+│   ├── sync_catalog.py                 # Refresh the list of Applied Skills from Learn
 │   └── sync_transcript.py              # Pull achievements from Microsoft Learn
 ├── app.js                              # Front-end logic (vanilla JS)
 ├── config.json                         # ← Your name, headshot, and social links
@@ -63,18 +64,26 @@ updates.
 
 ```json
 {
-    "owner": {
-        "name": "Sarah Lean",
-        "headline": "Cloud engineer chasing every Microsoft Applied Skill.",
-        "avatarUrl": "./assets/avatar.jpg",
-        "location": "Scotland"
+  "owner": {
+    "name": "Sarah Lean",
+    "headline": "Cloud engineer chasing every Microsoft Applied Skill.",
+    "avatarUrl": "./assets/avatar.jpg",
+    "location": "Scotland"
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/your-handle/",
+      "icon": "linkedin"
     },
-    "links": [
-        { "label": "LinkedIn", "url": "https://www.linkedin.com/in/your-handle/", "icon": "linkedin" },
-        { "label": "GitHub",   "url": "https://github.com/your-handle",           "icon": "github"   },
-        { "label": "Website",  "url": "https://your-site.dev",                    "icon": "website"  }
-    ],
-    "repoUrl": "https://github.com/your-handle/applied-skills-tracker"
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-handle",
+      "icon": "github"
+    },
+    { "label": "Website", "url": "https://your-site.dev", "icon": "website" }
+  ],
+  "repoUrl": "https://github.com/your-handle/applied-skills-tracker"
 }
 ```
 
@@ -104,12 +113,12 @@ looks like this:
 
 ```json
 {
-    "id": "deploy-and-configure-azure-monitor",
-    "name": "Deploy and configure Azure Monitor",
-    "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-and-configure-azure-monitor/",
-    "status": "not-started",
-    "achievedDate": null,
-    "notes": ""
+  "id": "deploy-and-configure-azure-monitor",
+  "name": "Deploy and configure Azure Monitor",
+  "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-and-configure-azure-monitor/",
+  "status": "not-started",
+  "achievedDate": null,
+  "notes": ""
 }
 ```
 
@@ -123,16 +132,45 @@ Save the file, refresh the site, and your progress panel updates instantly.
 
 ### Field reference
 
-| Field           | Type              | Notes                                                                    |
-| --------------- | ----------------- | ------------------------------------------------------------------------ |
-| `id`            | string            | Stable slug. Keep it unique; don't rename existing ones.                 |
-| `name`          | string            | Display name shown on the card.                                          |
-| `url`           | string (optional) | Link to the Microsoft Learn credential page.                             |
-| `status`        | `"not-started"` \| `"achieved"` | Anything other than `"achieved"` counts as not started. |
-| `achievedDate`  | ISO date or null  | Shown on the card and used by the "Recently achieved" sort.              |
-| `notes`         | string            | Free-text note. Blank strings are hidden automatically.                  |
-| `retired`       | boolean (optional) | `true` for credentials Microsoft has retired. Retired skills stay on the page so previously earned ones still count, but they're excluded from the "Remaining" total. |
-| `retiresOn`     | ISO date (optional) | Scheduled retirement date. The card shows a "Retires &lt;date&gt;" badge, and the skill is treated as retired automatically once the date passes. |
+| Field          | Type                            | Notes                                                                                                                                                                 |
+| -------------- | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`           | string                          | Stable slug. Keep it unique; don't rename existing ones.                                                                                                              |
+| `name`         | string                          | Display name shown on the card.                                                                                                                                       |
+| `url`          | string (optional)               | Link to the Microsoft Learn credential page.                                                                                                                          |
+| `status`       | `"not-started"` \| `"achieved"` | Anything other than `"achieved"` counts as not started.                                                                                                               |
+| `achievedDate` | ISO date or null                | Shown on the card and used by the "Recently achieved" sort.                                                                                                           |
+| `notes`        | string                          | Free-text note. Blank strings are hidden automatically.                                                                                                               |
+| `retired`      | boolean (optional)              | `true` for credentials Microsoft has retired. Retired skills stay on the page so previously earned ones still count, but they're excluded from the "Remaining" total. |
+| `retiresOn`    | ISO date (optional)             | Scheduled retirement date. The card shows a "Retires &lt;date&gt;" badge, and the skill is treated as retired automatically once the date passes.                     |
+
+---
+
+## Auto-sync the Applied Skills catalog
+
+You don't need to hand-maintain the list of available credentials. The
+[`scripts/sync_catalog.py`](scripts/sync_catalog.py) helper fetches the public
+Microsoft Learn catalog and merges it into `data/skills.json`:
+
+- New credentials are **appended** with `status: "not-started"`.
+- Existing entries have their `name`, `url`, `retired`, and `retiresOn` fields
+  refreshed from the catalog. Your progress fields (`status`, `achievedDate`,
+  `notes`) are always preserved.
+- Credentials that disappear from the catalog are kept and auto-marked
+  `retired: true` so previously earned ones still count.
+
+The [daily workflow](.github/workflows/sync-transcript.yml) runs this before
+the transcript sync (see below), so a fresh fork stays in sync with Microsoft's
+catalog with **zero configuration** — no secrets required.
+
+> **Heads-up:** the catalog endpoint (`/api/catalog/?type=appliedSkills`) is
+> undocumented and could change without notice. The script fails loudly rather
+> than silently overwriting `data/skills.json`.
+
+Run it locally at any time:
+
+```powershell
+python scripts/sync_catalog.py
+```
 
 ---
 
@@ -158,8 +196,11 @@ to date without you touching a file.
 2. In your GitHub fork, add a repository secret named `TRANSCRIPT_SHARE_ID`
    with that value (Settings → Secrets and variables → Actions → New
    repository secret).
-3. *(Optional)* Add a repository variable `LEARN_LOCALE` (e.g. `en-gb`) if you
+3. _(Optional)_ Add a repository variable `LEARN_LOCALE` (e.g. `en-gb`) if you
    want a locale other than `en-us`.
+
+Without `TRANSCRIPT_SHARE_ID` the workflow still runs the catalog sync — it
+just skips the transcript step.
 
 ### How it works
 
@@ -169,13 +210,12 @@ to date without you touching a file.
   `status` and `achievedDate`. Your `notes`, `url`, `retired`, and
   `retiresOn` values are left alone.
 - [`.github/workflows/sync-transcript.yml`](.github/workflows/sync-transcript.yml)
-  runs the script daily at 03:00 UTC (and on demand via *Actions → Run
-  workflow*). If the file changed, it commits and pushes — which then triggers
-  the Azure Static Web Apps deploy workflow.
-- Matching is by display name (the transcript payload doesn't include a URL
-  slug). If Microsoft publishes a new Applied Skill you've earned, the script
-  logs it as unmatched so you know to add a catalog entry for it in
-  `data/skills.json`.
+  runs the catalog sync followed by the transcript sync daily at 03:00 UTC
+  (and on demand via _Actions → Run workflow_). If the file changed, it commits
+  and pushes — which then triggers the Azure Static Web Apps deploy workflow.
+- Matching is by display name. Because the catalog sync runs first, any newly
+  published credential you've earned will already exist in `data/skills.json`
+  by the time the transcript step looks for a match.
 
 ### Run it locally
 
@@ -209,9 +249,9 @@ Then open <http://localhost:5173>.
 The repo ships with a [`.devcontainer/devcontainer.json`](.devcontainer/devcontainer.json)
 so you get a ready-to-go environment with zero local setup.
 
-- **Locally:** open the folder in VS Code, click *Reopen in Container* when
-  prompted (requires Docker Desktop + the *Dev Containers* extension).
-- **In the cloud:** click the *Code &rarr; Codespaces &rarr; Create codespace*
+- **Locally:** open the folder in VS Code, click _Reopen in Container_ when
+  prompted (requires Docker Desktop + the _Dev Containers_ extension).
+- **In the cloud:** click the _Code &rarr; Codespaces &rarr; Create codespace_
   button on your GitHub fork.
 
 When the container finishes building it automatically starts a static server
@@ -237,15 +277,15 @@ This repo deliberately does **not** ship a GitHub Actions workflow. When you
 connect your fork to Azure Static Web Apps, Azure will generate a workflow
 tailored to your deployment token and commit it to your repository for you.
 
-1. **Fork this repo** into your own GitHub account (or click *Use this template*).
+1. **Fork this repo** into your own GitHub account (or click _Use this template_).
 2. In the [Azure portal](https://portal.azure.com), create a new
    **Static Web App** resource:
    - **Plan type:** Free.
    - **Source:** GitHub → select your fork and the `main` branch.
    - **Build presets:** `Custom`.
    - **App location:** `/`
-   - **Api location:** *(leave empty)*
-   - **Output location:** *(leave empty)*
+   - **Api location:** _(leave empty)_
+   - **Output location:** _(leave empty)_
 3. Azure commits a new workflow file to `.github/workflows/` in your fork and
    adds the `AZURE_STATIC_WEB_APPS_API_TOKEN` secret automatically.
 4. Pull that workflow back down locally (`git pull`), then edit

@@ -32,12 +32,17 @@ your journey with the community.
 applied-skills-tracker/
 ├── .devcontainer/
 │   └── devcontainer.json               # One-click dev environment
+├── .github/
+│   └── workflows/
+│       └── sync-transcript.yml         # Daily Learn transcript sync
 ├── .vscode/
 │   └── extensions.json                 # Recommended editor extensions
 ├── assets/
 │   └── avatar.svg                      # Placeholder headshot (swap for your own)
 ├── data/
 │   └── skills.json                     # ← THE file you edit to mark progress
+├── scripts/
+│   └── sync_transcript.py              # Pull achievements from Microsoft Learn
 ├── app.js                              # Front-end logic (vanilla JS)
 ├── config.json                         # ← Your name, headshot, and social links
 ├── index.html                          # Single-page markup
@@ -128,6 +133,56 @@ Save the file, refresh the site, and your progress panel updates instantly.
 | `notes`         | string            | Free-text note. Blank strings are hidden automatically.                  |
 | `retired`       | boolean (optional) | `true` for credentials Microsoft has retired. Retired skills stay on the page so previously earned ones still count, but they're excluded from the "Remaining" total. |
 | `retiresOn`     | ISO date (optional) | Scheduled retirement date. The card shows a "Retires &lt;date&gt;" badge, and the skill is treated as retired automatically once the date passes. |
+
+---
+
+## Sync progress from your Microsoft Learn transcript (optional)
+
+Prefer not to edit JSON by hand? A helper script can pull your Applied Skills
+achievements straight from your public Microsoft Learn transcript and update
+`data/skills.json` for you. A daily GitHub Actions workflow keeps the site up
+to date without you touching a file.
+
+> **Heads-up:** the Learn transcript endpoint used here is undocumented and
+> not officially supported by Microsoft. It works well for a personal project
+> but could change without notice. Inspired by
+> [`guygregory/exam-timeline`](https://github.com/guygregory/exam-timeline),
+> which uses the same endpoint for exam data.
+
+### One-time setup
+
+1. **Make your Learn transcript public.** Sign in to
+   [Microsoft Learn](https://learn.microsoft.com/), open your profile → Settings,
+   and set the transcript to public. Copy the share ID from the URL:
+   `https://learn.microsoft.com/en-us/users/<you>/transcript/`**`<share_id>`**
+2. In your GitHub fork, add a repository secret named `TRANSCRIPT_SHARE_ID`
+   with that value (Settings → Secrets and variables → Actions → New
+   repository secret).
+3. *(Optional)* Add a repository variable `LEARN_LOCALE` (e.g. `en-gb`) if you
+   want a locale other than `en-us`.
+
+### How it works
+
+- [`scripts/sync_transcript.py`](scripts/sync_transcript.py) fetches the
+  transcript JSON, reads `appliedSkillsData.appliedSkillsCredentials`, and
+  merges each earned skill into `data/skills.json` — only ever setting
+  `status` and `achievedDate`. Your `notes`, `url`, `retired`, and
+  `retiresOn` values are left alone.
+- [`.github/workflows/sync-transcript.yml`](.github/workflows/sync-transcript.yml)
+  runs the script daily at 03:00 UTC (and on demand via *Actions → Run
+  workflow*). If the file changed, it commits and pushes — which then triggers
+  the Azure Static Web Apps deploy workflow.
+- Matching is by display name (the transcript payload doesn't include a URL
+  slug). If Microsoft publishes a new Applied Skill you've earned, the script
+  logs it as unmatched so you know to add a catalog entry for it in
+  `data/skills.json`.
+
+### Run it locally
+
+```powershell
+$env:TRANSCRIPT_SHARE_ID = "your-share-id"
+python scripts/sync_transcript.py
+```
 
 ---
 

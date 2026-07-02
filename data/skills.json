@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01",
+  "lastUpdated": "2026-07-02",
   "source": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
   "notes": "Includes both active and retired credentials. Retired skills stay in the list so previously earned ones still count.",
   "skills": [
@@ -105,7 +105,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/build-a-generative-ai-chat-app/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "migrate-sql-server-workloads-to-azure-sql-database",
@@ -113,7 +114,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/migrate-sql-workloads-azure-sql-database/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "create-agentic-workflows-by-using-microsoft-foundry",
@@ -161,7 +163,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/secure-storage-azure-files-azure-blob-storage/",
       "status": "achieved",
       "achievedDate": "2024-07-22",
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "get-started-with-azure-management-tasks",
@@ -217,7 +220,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-manage-canvas-apps-power-apps/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "administer-active-directory-domain-services",
@@ -233,7 +237,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-security-through-pipeline-using-devops/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "create-agents-in-microsoft-copilot-studio",
@@ -266,7 +271,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/configure-secure-workloads-use-azure-virtual-networking/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "create-and-manage-automated-processes-by-using-power-automate",
@@ -274,7 +280,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-and-manage-automated-processes-with-power-automate/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "accelerate-ai-assisted-development-by-using-github-copilot",
@@ -282,7 +289,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/accelerate-app-development-by-using-github-copilot/",
       "status": "achieved",
       "achievedDate": "2026-05-28",
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "create-an-ai-agent",
@@ -308,7 +316,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/configure-siem-security-operations-using-microsoft-sentinel/",
       "status": "achieved",
       "achievedDate": "2024-12-18",
-      "notes": ""
+      "notes": "",
+      "retired": true
     },
     {
       "id": "deploy-and-manage-azure-arc-enabled-servers",
@@ -316,6 +325,71 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/deploy-and-manage-azure-arc-enabled-servers/",
       "status": "achieved",
       "achievedDate": "2024-07-17",
+      "notes": "",
+      "retired": true
+    },
+    {
+      "id": "build-a-generative-ai-chat-app",
+      "name": "Develop a Generative AI Chat App Using the Microsoft Foundry SDK",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/build-a-generative-ai-chat-app/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "migrate-sql-workloads-azure-sql-database",
+      "name": "Migrate SQL Server workloads to Azure SQL Database",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/migrate-sql-workloads-azure-sql-database/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "secure-storage-azure-files-azure-blob-storage",
+      "name": "Secure storage for Azure Files and Azure Blob Storage",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/secure-storage-azure-files-azure-blob-storage/",
+      "status": "achieved",
+      "achievedDate": "2024-07-22",
+      "notes": ""
+    },
+    {
+      "id": "create-manage-canvas-apps-power-apps",
+      "name": "Create and manage canvas apps with Power Apps",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-manage-canvas-apps-power-apps/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "implement-security-through-pipeline-using-devops",
+      "name": "Implement security through a pipeline using Azure DevOps",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/implement-security-through-pipeline-using-devops/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "configure-secure-workloads-use-azure-virtual-networking",
+      "name": "Configure secure access to your workloads using Azure networking",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/configure-secure-workloads-use-azure-virtual-networking/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "create-and-manage-automated-processes-with-power-automate",
+      "name": "Create and manage automated processes by using Power Automate",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-and-manage-automated-processes-with-power-automate/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "accelerate-app-development-by-using-github-copilot",
+      "name": "Accelerate AI-assisted development by using GitHub Copilot",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/accelerate-app-development-by-using-github-copilot/",
+      "status": "achieved",
+      "achievedDate": "2026-05-28",
       "notes": ""
     }
   ]

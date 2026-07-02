@@ -26,7 +26,8 @@
                 "ritwickdey.LiveServer",
                 "streetsidesoftware.code-spell-checker",
                 "GitHub.vscode-pull-request-github",
-                "ms-python.python"
+                "ms-python.python",
+                "GitHub.vscode-github-actions"
             ],
             "settings": {
                 "editor.formatOnSave": true,

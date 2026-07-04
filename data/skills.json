@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03",
+  "lastUpdated": "2026-07-04",
   "source": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
   "notes": "Includes both active and retired credentials. Retired skills stay in the list so previously earned ones still count.",
   "skills": [
@@ -170,8 +170,8 @@
       "id": "get-started-with-azure-management-tasks",
       "name": "Get started with Azure management tasks",
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-with-azure-management-tasks/",
-      "status": "not-started",
-      "achievedDate": null,
+      "status": "achieved",
+      "achievedDate": "2026-07-03",
       "notes": ""
     },
     {
@@ -253,8 +253,8 @@
       "id": "get-started-developing-agents-in-microsoft-foundry",
       "name": "Get started developing agents in Microsoft Foundry",
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/get-started-developing-agents-in-microsoft-foundry/",
-      "status": "not-started",
-      "achievedDate": null,
+      "status": "achieved",
+      "achievedDate": "2026-07-03",
       "notes": ""
     },
     {

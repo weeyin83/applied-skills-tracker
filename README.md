@@ -212,7 +212,9 @@ just skips the transcript step.
 - [`.github/workflows/sync-transcript.yml`](.github/workflows/sync-transcript.yml)
   runs the catalog sync followed by the transcript sync daily at 03:00 UTC
   (and on demand via _Actions → Run workflow_). If the file changed, it commits
-  and pushes — which then triggers the Azure Static Web Apps deploy workflow.
+  and pushes. The Azure Static Web Apps deploy workflow also listens for the
+  sync workflow to complete successfully, so transcript-driven updates redeploy
+  even though `GITHUB_TOKEN` pushes do not trigger downstream workflows.
 - Matching is by display name. Because the catalog sync runs first, any newly
   published credential you've earned will already exist in `data/skills.json`
   by the time the transcript step looks for a match.

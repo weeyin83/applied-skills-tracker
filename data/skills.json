@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08",
+  "lastUpdated": "2026-07-09",
   "source": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
   "notes": "Includes both active and retired credentials. Retired skills stay in the list so previously earned ones still count.",
   "skills": [
@@ -247,7 +247,8 @@
       "status": "not-started",
       "achievedDate": null,
       "notes": "",
-      "retiresOn": "2026-07-08"
+      "retiresOn": "2026-07-08",
+      "retired": true
     },
     {
       "id": "get-started-developing-agents-in-microsoft-foundry",

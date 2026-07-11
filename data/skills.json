@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10",
+  "lastUpdated": "2026-07-11",
   "source": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
   "notes": "Includes both active and retired credentials. Retired skills stay in the list so previously earned ones still count.",
   "skills": [
@@ -123,7 +123,8 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/create-agentic-workflows-by-using-microsoft-foundry/",
       "status": "not-started",
       "achievedDate": null,
-      "notes": ""
+      "notes": "",
+      "retiresOn": "2026-07-17"
     },
     {
       "id": "defend-against-cyberthreats-with-microsoft-defender-xdr",
@@ -391,6 +392,22 @@
       "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/accelerate-app-development-by-using-github-copilot/",
       "status": "achieved",
       "achievedDate": "2026-05-28",
+      "notes": ""
+    },
+    {
+      "id": "develop-an-agent-with-integrated-tools",
+      "name": "Develop an agent with integrated tools",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/develop-an-agent-with-integrated-tools/",
+      "status": "not-started",
+      "achievedDate": null,
+      "notes": ""
+    },
+    {
+      "id": "build-an-agent-in-microsoft-copilot-studio",
+      "name": "Build an agent in Microsoft Copilot Studio",
+      "url": "https://learn.microsoft.com/en-us/credentials/applied-skills/build-an-agent-in-microsoft-copilot-studio/",
+      "status": "not-started",
+      "achievedDate": null,
       "notes": ""
     }
   ]

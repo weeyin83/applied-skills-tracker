@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18",
+  "lastUpdated": "2026-07-19",
   "source": "https://learn.microsoft.com/en-us/credentials/browse/?credential_types=applied%20skills",
   "notes": "Includes both active and retired credentials. Retired skills stay in the list so previously earned ones still count.",
   "skills": [
@@ -124,7 +124,8 @@
       "status": "not-started",
       "achievedDate": null,
       "notes": "",
-      "retiresOn": "2026-07-17"
+      "retiresOn": "2026-07-17",
+      "retired": true
     },
     {
       "id": "defend-against-cyberthreats-with-microsoft-defender-xdr",
